@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Avatar - Visualization 2</title>
+  <link rel="stylesheet" href="../Index.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
+</head>
+<body>
+
+  <!-- Sticky Navigation -->
+  <nav class="modern-nav">
+    <div class="nav-container">
+      <div class="brand">AVATAR</div>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../Pages/vis1.html">Vis 1</a></li>
+        <li><a href="vis2.html" class="active">Vis 2</a></li>
+        <li><a href="../Pages/vis3.html">Vis 3</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="page-header">
+    <h1 class="main-title">Avatar: The Way of Water</h1>
+    <h2 class="sub-title">The Second Movie</h2>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    
+    <!-- Text and Image Section -->
+    <section class="text-image-section">
+      <div class="text-block">
+        <h2>The Way of Water</h2>
+        <p>Avatar: The Way of Water follows the family of Jake Sully and Neytiri as they face a renewed human threat. To protect their children, they seek refuge with the ocean tribe of the Na'vi. The conflict escalates and forces the Sully family into a battle that tests their bonds and their newfound community. The film expands Pandora's world while exploring themes of family, survival, and belonging.</p>
+        <p>The film used new technologies as well, pioneering true underwater performance capture, allowing actors' movements to be recorded accurately beneath the surface for the first time. The film also used advanced facial capture systems and AI water simulations, resulting in highly realistic ocean environments and creature interactions. Together, these innovations helped expand the visual realism of Pandora and set a new standard for digital filmmaking.</p>
+      </div>
+      <img src="../Data/avatar2img_resized.webp" alt="Avatar Way of Water Scene" class="side-image">
+    </section>
+
+    <!-- Text Introduction -->
+    <section class="text-section">
+      <h2>Avatar 2: The Phenomenon</h2>
+      <p>Released over a decade after the original, Avatar: The Way of Water faced the challenge of living up to unprecedented expectations. Despite streaming's rise and changing theater habits, the sequel proved that audiences still craved epic cinematic experiences, becoming one of the highest-grossing films of all time.</p>
+    </section>
+
+    <!-- First Chart Container -->
+    <div class="chart-container">
+      <h3 class="chart-title">Regional Box Office Performance - The Way of Water</h3>
+      <div class="chart-wrapper">
+        <div id="observablehq-viewof-selectedRegionA2-1ad5da1d"></div>
+        <div id="observablehq-vis2-1ad5da1d"></div>
+        <p class="gap-text">The revenue distribution for Avatar: The Way of Water highlights how the sequel performed across different international markets. The horizontal bar format makes regional comparisons straightforward, with countries arranged clearly and revenue differences easy to interpret. China, France, and South Korea emerge as particularly important markets, reinforcing the idea that the franchise continues to rely heavily on international audiences. One of the striking elements is the large “International Total,” which immediately communicates how global turnout shaped the film’s success. By presenting the data this way, the chart demonstrates not only where the film earned the most but also how the sequel’s financial landscape differs from the original’s, especially in a post-pandemic environment.
+        </p>
+      </div>
+    </div>
+
+   
+
+    <!-- Text Section -->
+    <section class="text-section">
+      <h2>Staying Power Analysis</h2>
+      <p>One of the most interesting aspects of Avatar: The Way of Water's box office performance was its remarkable longevity. Unlike many modern blockbusters that see steep drops after opening weekend, the sequel demonstrated sustained audience interest week after week, suggesting that word-of-mouth and the immersive experience drew repeat viewers and late adopters.</p>
+    </section>
+
+    <!-- Second Chart Container -->
+    <div class="chart-container">
+      <h3 class="chart-title">Box Office Trends Over Time</h3>
+      <div class="chart-wrapper">
+        <div id="observablehq-vis2-0fc8396a"></div>
+        <p class="gap-text">The weekly performance of The Way of Water shows a distinct pattern compared to the 2009 release. The film opens with a dramatic revenue spike, signaling strong anticipation and brand loyalty built over more than a decade. From there, the numbers drop more quickly, reflecting modern viewing habits where moviegoers front-load attendance during opening weeks. The timeline across the bottom allows viewers to follow these shifts, while the revenue scale on the left quantifies each week’s contribution. The sharper decline contrasts with the original film’s slow fade and highlights how the cinematic landscape has changed, and streaming options, competition, and post-pandemic behaviours all play a role. Despite the faster drop-off, the high early weeks were enough to generate substantial totals, showing that the sequel succeeded through intensity rather than duration.
+        </p>
+      </div>
+    </div>
+
+    <!-- Closing Text Section -->
+    <section class="text-section">
+      <h2>Conclusion</h2>
+      <p>The Way of Water's success reaffirmed that groundbreaking visual storytelling combined with emotional depth can still draw massive global audiences. Its performance across different regions and over extended periods demonstrated the enduring appeal of the Avatar franchise and James Cameron's vision for Pandora.</p>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Avatar Project. All rights reserved.</p>
+  </footer>
+
+  <!-- Observable Scripts -->
+  <script type="module">
+    import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+    import define from "https://api.observablehq.com/d/b82f70ba16deafdc@209.js?v=4";
+    new Runtime().module(define, name => {
+      if (name === "viewof selectedRegionA2") return new Inspector(document.querySelector("#observablehq-viewof-selectedRegionA2-1ad5da1d"));
+      if (name === "vis2") return new Inspector(document.querySelector("#observablehq-vis2-1ad5da1d"));
+      return ["filteredDataA2"].includes(name);
+    });
+  </script>
+
+  <script type="module">
+    import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+    import define from "https://api.observablehq.com/d/18b9cf26dc8a61e9@150.js?v=4";
+    new Runtime().module(define, name => {
+      if (name === "vis2") return new Inspector(document.querySelector("#observablehq-vis2-0fc8396a"));
+    });
+  </script>
+
+</body>
+</html>

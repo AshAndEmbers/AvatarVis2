@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Avatar - Visualization 3</title>
+  <link rel="stylesheet" href="../Index.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
+  
+  <style>
+   
+  </style>
+</head>
+<body>
+
+  <!-- Sticky Navigation -->
+  <nav class="modern-nav">
+    <div class="nav-container">
+      <div class="brand">AVATAR</div>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../Pages/vis1.html">Vis 1</a></li>
+        <li><a href="../Pages/vis2.html">Vis 2</a></li>
+        <li><a href="vis3.html" class="active">Vis 3</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="page-header">
+    <h1 class="main-title">Comparing the Two Films</h1>
+    <h2 class="sub-title">A Comparative Analysis of Box Office Performance</h2>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    
+    <!-- Introduction Text Section -->
+    <section class="text-section">
+      <h2>Two Eras, Two Phenomena</h2>
+      <p>The Avatar franchise spans two distinct eras of cinema, each shaped by unique technological innovations and cultural contexts. While both films achieved massive success, their paths to box office dominance reveal fascinating differences in audience behavior, market dynamics, and the evolving landscape of theatrical entertainment. (See some Behind the scenes from Avatar (2009) below)</p>
+    </section>
+
+    <!-- Responsive Gallery -->
+    <div class="gallery-container">
+      <img src="../Data/Avatar-img5.webp" alt="Avatar 2009 - The 3D Revolution">
+      <img src="../Data/avatar-img6.webp" alt="Avatar Way of Water - Underwater Innovation">
+      <img src="../Data/avatar-img7.webp" alt="Cinema Experience">
+      <img src="../Data/avatar-img8.png" alt="3D Technology">
+      <img src="../Data/avatar-img9.jpg" alt="Underwater Scenes">
+    </div>
+
+    <!-- Market Performance Section -->
+    <section class="text-section">
+      <h2>Global Market Performance</h2>
+      <p>Analyzing the box office performance across different regions reveals how both films captured worldwide audiences, yet faced distinct challenges unique to their release periods. The first Avatar rode the wave of 3D cinema adoption, while The Way of Water navigated post-pandemic theater recovery and streaming competition.</p>
+    </section>
+
+    <!-- Full Width Image -->
+    <div class="chart-container">
+      <h3 class="chart-title">Domestic and International Box Office Analysis</h3>
+      <div class="chart-wrapper">
+      <div id="observablehq-vis4-ffb4fa4a"></div>
+      <p class="gap-text">Instead of viewing each film in isolation, the scatter plot positions Avatar and The Way of Water alongside other top-grossing films to reveal broader patterns. Domestic earnings run horizontally, while international totals rise vertically, creating a two-dimensional space where each film finds its place. Both Avatar titles appear near the upper-right cluster, showing not only high global revenue but a strong imbalance toward international performance. This perspective makes it immediately clear that the franchise relies far more on global audiences than domestic ones. Using a scatter plot helps viewers see this relationship at a glance while also comparing how the films stand relative to other blockbusters. The visualization reinforces the idea that international turnout has always been a defining factor in Avatar's success.
+      </p>
+      </div>
+    </div>
+
+    <!-- Analysis Text Section -->
+    <section class="text-section">
+      <h2>Understanding the Trends</h2>
+      <p>The data reveals important patterns in how audiences engaged with each film. While both achieved extraordinary success, the trajectory of their earnings reflects the changing entertainment landscape and evolving consumer preferences over the thirteen-year gap between releases.</p>
+    </section>
+
+     <!-- Chart Container -->
+    <div class="chart-container">
+      <h3 class="chart-title"> Weekly ticket sales Analysis</h3>
+      <div class="chart-wrapper">
+        <div id="observablehq-vis3-c70827fb"></div>
+        <p class="gap-text">Seeing the two films' first eight weeks side-by-side reveals how audience behaviour differed between 2009 and 2022. The Way of Water begins with a significantly higher opening, likely due to built-up hype and the established reputation of the franchise. However, its decline is noticeably steeper, showing how quickly interest tapered off in the modern theatrical landscape. In contrast, the original Avatar shows a slower, steadier descent, which aligns with older viewing patterns where films stayed in theatres longer and avoided drastic week-to-week drops. The timeline makes these trajectories easy to follow, while the revenue scale shows the magnitude of the differences. By pairing both lines in one graph, viewers can clearly see that the original sustained momentum better, while the sequel relied heavily on its massive initial turnout.
+        </p>
+      </div>
+    </div>
+
+    <!-- Conclusion Section -->
+    <section class="text-section">
+      <h2>Looking Ahead: Avatar 3 and Beyond</h2>
+      <p>The trends suggest that Avatar: Fire and Ash may not create a significant shift in theatre dynamics the way the first two films did. Avatar (2009) benefited from the explosive rise of 3D technology, while The Way of Water leveraged major advances in CGI and underwater performance capture, helping both films stand out in their eras.</p>
+      <p>However, our analysis shows that recent years have not introduced any major new technological breakthroughs that could drive a similar surge in audience excitement. Regional box office performance also indicates that global markets have become more cautious, and domestic ticket sales continue to face competition from streaming habits established during the pandemic.</p>
+      <p>Without a new technological push or a clear industry-changing innovation, Avatar: Fire and Ash may face challenges in repeating the franchise's earlier success, suggesting that its impact on theatre attendance may be more modest than the films that came before it.</p>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Avatar Project. All rights reserved.</p>
+  </footer>
+
+  <!-- Observable Scripts -->
+  <script type="module">
+    import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+    import define from "https://api.observablehq.com/d/18b9cf26dc8a61e9@152.js?v=4";
+    new Runtime().module(define, name => {
+      if (name === "vis3") return new Inspector(document.querySelector("#observablehq-vis3-c70827fb"));
+    });
+  </script>
+
+  <script type="module">
+    import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+    import define from "https://api.observablehq.com/d/18b9cf26dc8a61e9@184.js?v=4";
+    new Runtime().module(define, name => {
+      if (name === "vis4") return new Inspector(document.querySelector("#observablehq-vis4-ffb4fa4a"));
+    });
+  </script>
+
+</body>
+</html>
